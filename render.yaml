@@ -12,7 +12,7 @@ services:
         value: production
       - key: PORT
         value: 10000
-      - key: OPENROUTER_API_KEY
+      - key: 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
         sync: false
       - key: AI_MODEL
         value: mistralai/mistral-7b-instruct:free
