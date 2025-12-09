@@ -1,0 +1,36 @@
+{
+  "name": "exam-prep-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered exam preparation platform for university students",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "keywords": [
+    "exam",
+    "preparation",
+    "ai",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mammoth": "^1.6.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "pptx2json": "^0.0.10",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
+  }
+}

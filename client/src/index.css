@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.quiz-option {
+  @apply border-2 border-gray-300 rounded-lg p-4 cursor-pointer transition-all hover:border-primary-500 hover:bg-primary-50;
+}
+
+.quiz-option.selected {
+  @apply border-primary-500 bg-primary-100;
+}
+
+.quiz-option.correct {
+  @apply border-green-500 bg-green-50;
+}
+
+.quiz-option.incorrect {
+  @apply border-red-500 bg-red-50;
+}

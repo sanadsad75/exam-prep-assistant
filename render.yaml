@@ -1,0 +1,21 @@
+services:
+  # Backend API
+  - type: web
+    name: exam-prep-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: AI_MODEL
+        value: mistralai/mistral-7b-instruct:free
+      - key: APP_URL
+        sync: false
+    healthCheckPath: /
